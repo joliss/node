@@ -345,6 +345,8 @@ assert.equal(failures.length, 0, failures.join(''));
 // path.isAbsolute tests
 assert.equal(path.win32.isAbsolute('//server/file'), true);
 assert.equal(path.win32.isAbsolute('\\\\server\\file'), true);
+assert.equal(path.win32.isAbsolute('/Users/'), true);
+assert.equal(path.win32.isAbsolute('\\Users\\'), true);
 assert.equal(path.win32.isAbsolute('C:/Users/'), true);
 assert.equal(path.win32.isAbsolute('C:\\Users\\'), true);
 assert.equal(path.win32.isAbsolute('C:cwd/another'), false);
